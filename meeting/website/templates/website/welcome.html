@@ -2,17 +2,24 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Meetings</title>
 </head>
 <body>
-    <h1>Welcome to the Meeting Planner!</h1>
+<h1>Welcome to the Meeting Planner!</h1>
 <p>
-    This is the demo version
+    This is the website demo version
     <em> Django: Getting Started</em>
-    on  <a href="https://www.google.com"> Google</a>
+    on <a href="https://www.google.com"> Google</a>
 </p>
-<p>
-    There are currnetly {{num_meetings}} meetings in the database.
-</p>
+<h2> Meetings </h2>
+<ul>
+    {% for meeting in meetings %}
+    <li>
+        <a href="{% url 'detail' meeting.id %}">
+            {{ meeting.title }} </a>
+    </li>
+    {% endfor %}
+</ul>
+ <a href="{% url 'rooms' %}">Rooms</a>
 </body>
 </html>
