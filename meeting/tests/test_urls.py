@@ -1,6 +1,6 @@
 from django.test import SimpleTestCase
 from django.urls import reverse, resolve
-# from we
+
 
 class TestUrls(SimpleTestCase):
 
@@ -9,3 +9,5 @@ class TestUrls(SimpleTestCase):
 
         url = reverse('welcome')
         print(resolve(url))
+
+
